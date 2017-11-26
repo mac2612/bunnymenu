@@ -29,8 +29,8 @@ void ImgMenu::Draw(SDL_Surface *screen) {
   SDL_Surface *img = NULL;
   img = IMG_Load(active_img->second.c_str());
   SDL_Rect offset;
-  offset.x = 160 - (img->w / 2);
-  offset.y = 120 - (img->h / 2);
+  offset.x = (screen->w / 2) - (img->w / 2);
+  offset.y = (screen->h / 2) - (img->h / 2);
   SDL_BlitSurface(img, NULL, screen, &offset);
   SDL_Flip(screen);
   SDL_FreeSurface(img);
