@@ -23,7 +23,7 @@ std::string FileMenu::ChooseItem(Background &background) {
   sort(files.begin(), files.end());
   files.erase(std::remove(files.begin(), files.end(), "."), files.end());
   files.erase(std::remove(files.begin(), files.end(), ".."), files.end());
-  ListSelect selector = ListSelect(files, 15);
+  ListSelect selector = ListSelect(files, (background.GetScreen()->h / 16));
   std::string test = selector.ChooseItem(background.GetScreen(), &background);
   //cout << "Read directory: " << files.begin() << "end: " << files.end() << endl;
   return test;

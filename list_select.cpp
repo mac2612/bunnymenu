@@ -67,6 +67,7 @@ std::string ListSelect::ChooseItem(SDL_Surface* screen, Background* backgnd) {
         case SDLK_UP:
           ScrollPrevious();
           break;
+	case SDLK_LEFT:
 	case SDLK_l:
 	case SDLK_PAGEUP:
 	  ScrollPreviousMulti(pageSize);
@@ -74,6 +75,7 @@ std::string ListSelect::ChooseItem(SDL_Surface* screen, Background* backgnd) {
         case SDLK_DOWN:
           ScrollNext();
           break;
+	case SDLK_RIGHT:
 	case SDLK_PAGEDOWN:
 	case SDLK_r:
 	  ScrollNextMulti(pageSize);
