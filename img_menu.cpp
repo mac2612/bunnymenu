@@ -88,7 +88,7 @@ std::string ImgMenu::ChooseItem() {
 }
 
 int not_main(int argc, char *args[]) {
-  Background background = Background("background.jpg");
+  Background background = Background("background.jpg", 320, 240, 32);
   stringmap list;
   list.insert(std::make_pair("NES", "nes.png"));
   list.insert(std::make_pair("SNES", "snes.png"));

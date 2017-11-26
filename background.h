@@ -8,7 +8,7 @@ class Background {
   SDL_Surface *screen;
   SDL_Surface *background;
 public:
-  Background(std::string imgName_in);
+  Background(std::string imgName_in, int width, int height, int bpp);
   void Draw();
   SDL_Surface* GetScreen();
 };

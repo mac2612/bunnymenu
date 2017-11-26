@@ -141,7 +141,7 @@ std::string ListSelect::GetCurrent() {
 
 
 int main2() {
-  Background background = Background("/usr/share/bunnymenu/background.jpg");
+  Background background = Background("/usr/share/bunnymenu/background.jpg", 320, 240, 32);
   TTF_Init();
   stringvec list;
   for(int i = 0; i < 8; i++) {

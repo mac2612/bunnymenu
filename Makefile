@@ -1,7 +1,7 @@
 CXX      = $(CROSS)g++
 CXXFLAGS =  -lSDL -lSDL_image -lSDL_ttf -g -I. -std=c++11 
-DEPS = background.h file_menu.h img_menu.h list_select.h
-OBJ =  main.o file_menu.o img_menu.o list_select.o background.o
+DEPS = background.h file_menu.h img_menu.h list_select.h input_parser.h
+OBJ =  main.o file_menu.o img_menu.o list_select.o background.o input_parser.o
 
 : %.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
