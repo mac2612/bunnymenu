@@ -1,7 +1,7 @@
 #include "img_menu.h"
 #include <unistd.h>
 
-ImgMenu::ImgMenu(stringmap imgList_in, Background* backgnd_in) {
+ImgMenu::ImgMenu(stringmap imgList_in, Background *backgnd_in) {
   imgList = imgList_in;
   active_img = imgList.begin();
   backgnd = backgnd_in;
@@ -46,44 +46,34 @@ std::string ImgMenu::ChooseItem() {
     backgnd->Draw();
     Draw(screen);
     while (SDL_WaitEvent(&event) >= 0 && run) {
-      //If the user has Xed out the window
-      if( event.type == SDL_QUIT ) {
-        //Quit the program
+      // If the user has Xed out the window
+      if (event.type == SDL_QUIT) {
+        // Quit the program
         run = false;
-	return "QUIT";
+        return "QUIT";
       }
- 
+
       if (event.type == SDL_KEYDOWN) {
         switch (event.key.keysym.sym) {
-        case SDLK_LEFT:
-          ScrollPrevious();
-          break;
-        case SDLK_RIGHT:
-          ScrollNext();
-          break;
-        case SDLK_RETURN:
-        case SDLK_b:
-	case SDLK_u:
-          run = 0;
-          break;
-        default:
-          break;
+          case SDLK_LEFT:
+            ScrollPrevious();
+            break;
+          case SDLK_RIGHT:
+            ScrollNext();
+            break;
+          case SDLK_RETURN:
+          case SDLK_b:
+          case SDLK_u:
+            run = 0;
+            break;
+          default:
+            break;
         }
         backgnd->Draw();
-	Draw(screen);
-
+        Draw(screen);
+      }
     }
-}
-    //if(state[SDLK_LEFT]) {
-    //  ScrollPrevious();
-    //}
-    //if(state[SDLK_RIGHT]) {
-    //  ScrollNext();
-    //}
-    //cout << "state:" << state << endl;
-    //state = SDL_GetKeyState(NULL);
-    //usleep(200000);
-    }
+  }
   return GetCurrent();
 }
 
@@ -99,4 +89,3 @@ int not_main(int argc, char *args[]) {
 
   return 0;
 }
-

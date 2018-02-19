@@ -1,9 +1,9 @@
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
 #include <iostream>
 #include <iterator>
 #include <map>
 #include <string>
+#include "SDL/SDL.h"
+#include "SDL/SDL_image.h"
 #include "background.h"
 using namespace std;
 
@@ -13,7 +13,8 @@ class ImgMenu {
   stringmap imgList;
   stringmap::iterator active_img;
   Background* backgnd = NULL;
-public:
+
+ public:
   ImgMenu(stringmap imgList_in, Background* backgnd_in);
   void ScrollPrevious();
   void ScrollNext();

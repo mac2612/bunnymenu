@@ -1,13 +1,13 @@
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
+#include <dirent.h>
+#include <sys/types.h>
 #include <iostream>
 #include <map>
 #include <string>
 #include <vector>
-#include <sys/types.h>
-#include <dirent.h>
-#include "list_select.h"
+#include "SDL/SDL.h"
+#include "SDL/SDL_image.h"
 #include "background.h"
+#include "list_select.h"
 
 using namespace std;
 
@@ -17,8 +17,8 @@ typedef std::map<std::string, std::string> stringmap;
 class FileMenu {
   std::string current_dir;
   std::string top_dir;
-public:
+
+ public:
   FileMenu(std::string init_dir);
   std::string ChooseItem(Background &background);
 };
-

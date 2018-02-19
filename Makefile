@@ -15,6 +15,7 @@ install:
 	install -D theme/background.jpg /usr/share/bunnymenu/background.jpg
 	install -D theme/snes.png /usr/share/bunnymenu/snes.png
 	install -D theme/nes.png /usr/share/bunnymenu/nes.png
+	install -D theme/genesis.png /usr/share/bunnymenu/genesis.png
 
 
 clean:

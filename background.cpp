@@ -1,9 +1,8 @@
-#include "SDL/SDL_image.h"
-#include <string>
 #include "background.h"
+#include <string>
+#include "SDL/SDL_image.h"
 
 using namespace std;
-
 
 Background::Background(std::string imgName_in, int width, int height, int bpp) {
   imgName = imgName_in;
@@ -19,6 +18,4 @@ void Background::Draw() {
   SDL_BlitSurface(background, NULL, screen, NULL);
 }
 
-SDL_Surface* Background::GetScreen() {
-  return screen;
-}
+SDL_Surface* Background::GetScreen() { return screen; }
