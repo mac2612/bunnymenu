@@ -16,7 +16,9 @@ install:
 	install -D theme/snes.png /usr/share/bunnymenu/snes.png
 	install -D theme/nes.png /usr/share/bunnymenu/nes.png
 	install -D theme/genesis.png /usr/share/bunnymenu/genesis.png
-
+	install -D scripts/startnes.sh /usr/bin
+	install -D scripts/startsnes.sh /usr/bin
+	install -D scripts/respawn_menu.sh /usr/bin
 
 clean:
 	rm -f bunnymenu *.o *.gch
